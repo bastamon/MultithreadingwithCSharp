@@ -14,7 +14,7 @@ namespace Chapter1.Recipe7
 			threadOne.Name = "ForegroundThread";
 			var threadTwo = new Thread(sampleBackground.CountNumbers);
 			threadTwo.Name = "BackgroundThread";
-			threadTwo.IsBackground = true;
+			threadTwo.IsBackground = true;//主程序会运行直到前台线程运行结束,但不会等待后台线程结束
 
 			threadOne.Start();
 			threadTwo.Start();
